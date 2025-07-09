@@ -1,10 +1,9 @@
+import Routers from "./routes/index";
+
 function App() {
 
-  return (
-    <>
-		Blog APP with API
-    </>
-  )
+  return <Routers />
+  
 }
 
 export default App

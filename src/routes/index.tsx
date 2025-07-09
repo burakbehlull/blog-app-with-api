@@ -5,6 +5,7 @@ export default function Routes() {
         {
             path: "/",
             element: <div>Welcome to the Home Page</div>
+            
         }
     ])
 }
