@@ -1,8 +1,13 @@
 import { Outlet, useRoutes } from "react-router-dom";
 
+import { Home, UserProfile, 
+	CreatePost, Post, PostEdit,
+	Login, Register 
+} from "@pages";
 
-const Test = ()=> {
-    console.log("Test component rendered");
+
+const Test = ({text})=> {
+    console.log(text)
     return <Outlet />
 }
 
@@ -11,53 +16,57 @@ export default function Routes() {
         // main routes
         {
             path: '/',
-            element: <>Welcome to the Home Page</>
+            element: <Home />
         },
 		
         // auth routes
         {
-            element: <></>,
+            element: <Test text="auth route render-ed" />,
             children: [
                 {
                     path: "/login",
-                    element: <>Login Page</>
+                    element: <Login />
                 },
                 {
                     path: "/register",
-                    element: <>Register Page</>
+                    element: <Register />
                 }
             ]
         },
 
         // user routes
         {
-            element: <Test />,
+            element: <Test text="public user route render-ed" />,
             children: [
                 {
                     path: '/:userId',
-                    element: <>User Profile Page</>
+                    element: <UserProfile />
                 },
                 {
-                    path: '/:userId/:postId',
-                    element: <>User Post Page</>
+                    path: '/posts/:postId',
+                    element: <Post />
                 }
             ]
         },
 
         // private user routes
         {
-            element: <></>,
+            element: <Test text="private auth route render-ed" />,
             children: [
                 {
                     path: '/create-post',
-                    element: <>Create Post Page</>
-                }
+                    element: <CreatePost />
+                },
+				{
+					path: '/posts/:postId/edit',
+					element: <PostEdit />
+				}
             ]
         },
 
         // admin routes
         {
-            element: <></>,
+            element: <Test text="admin route render-ed" />,
             children: [
                 {
                     path: '/admin',
