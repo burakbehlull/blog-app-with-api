@@ -1,19 +1,10 @@
-import { useRoutes } from "react-router-dom";
-
-/*
-Welcome.jsx -> /
-Login.jsx -> /login
-Register.jsx -> /register
-
-UserProfile.jsx -> /:userId
-Post.jsx -> /:userId/:postId
-
-UserProfileEdit.jsx -> MODAL
-
-CreatePost.jsx -> /create-post
+import { Outlet, useRoutes } from "react-router-dom";
 
 
-*/
+const Test = ()=> {
+    console.log("Test component rendered");
+    return <Outlet />
+}
 
 export default function Routes() {
     return useRoutes([
@@ -28,11 +19,11 @@ export default function Routes() {
             element: <></>,
             children: [
                 {
-                    path: "login",
+                    path: "/login",
                     element: <>Login Page</>
                 },
                 {
-                    path: "register",
+                    path: "/register",
                     element: <>Register Page</>
                 }
             ]
@@ -40,14 +31,14 @@ export default function Routes() {
 
         // user routes
         {
-            element: <></>,
+            element: <Test />,
             children: [
                 {
-                    path: ':userId',
+                    path: '/:userId',
                     element: <>User Profile Page</>
                 },
                 {
-                    path: ':userId/:postId',
+                    path: '/:userId/:postId',
                     element: <>User Post Page</>
                 }
             ]

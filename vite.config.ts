@@ -17,6 +17,8 @@ export default defineConfig({
     alias: {
       "~": way("src"),
       "@pages": way("src/pages/index"),
+      '@requests': way('src/helpers/requests'),
+      '@ui': way('src/components/ui/index'),
     }
   }
 })
