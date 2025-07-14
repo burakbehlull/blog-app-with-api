@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Text } from "@mantine/core";
 
-export default function MainLayout({children}) {
+export default function Layout({children}) {
   return (
     <Flex direction="column" h="100vh">
       <Box
@@ -22,12 +22,7 @@ export default function MainLayout({children}) {
         </Text>
       </Box>
 
-      <Box h="100%"
-	  style={{
-		paddingTop: "5rem",
-		paddingLeft: "1.3rem",
-	  }}
-	  >
+      <Box h="90%">
 		  {children}
       </Box>
     </Flex>
