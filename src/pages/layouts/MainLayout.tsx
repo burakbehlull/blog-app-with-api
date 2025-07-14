@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Text } from "@mantine/core";
+import { Box, Flex, Text } from "@mantine/core";
 
 export default function MainLayout({children}) {
   return (

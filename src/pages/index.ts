@@ -1,4 +1,5 @@
 import MainLayout from "./layouts/MainLayout";
+import ProfileLayout from "./layouts/ProfileLayout";
 import UserProfile from "./UserProfile";
 
 import Login from "./auth/Login";
@@ -13,6 +14,11 @@ import PostEdit from "./post/PostEdit";
 import Home from "./Home";
 
 export {
+	// layouts
+	MainLayout,
+	ProfileLayout,
+	
+	// main
 	Home,
 	
 	// public user pages
@@ -26,8 +32,5 @@ export {
 	
 	// auth
 	Register,
-	Login,
-	
-	// main
-	MainLayout
+	Login
 }
