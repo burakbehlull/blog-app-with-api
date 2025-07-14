@@ -1,4 +1,4 @@
-import Layout from "./Layout";
+import MainLayout from "./layouts/MainLayout";
 import UserProfile from "./UserProfile";
 
 import Login from "./auth/Login";
@@ -29,5 +29,5 @@ export {
 	Login,
 	
 	// main
-	Layout
+	MainLayout
 }

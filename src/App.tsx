@@ -1,8 +1,15 @@
 import Routers from "./routes/index";
-
+import { MainLayout } from "@pages"
 function App() {
 
-  return <Routers />
+  return (
+	<>
+		<MainLayout>
+			<Routers />
+		</MainLayout>
+	</>
+  )
+  
   
 }
 
