@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom"
 
 import { Container, Title, Text, Group, Divider, 
-	Stack, Textarea, Button, Box,  Avatar } from "@mantine/core";
+	Stack, Textarea, Button, Box, Avatar, Paper } from "@mantine/core";
 
 const blogData = {
   title: "React ile Modern Web Uygulamaları",
@@ -11,6 +11,20 @@ const blogData = {
   publishedAt: "20 Temmuz 2025",
   content: "React, kullanıcı arayüzleri oluşturmak için kullanılan popüler bir JavaScript kütüphanesidir.",
 };
+const comments = [
+  {
+    id: 1,
+    user: "ayse_krt",
+    avatar: "https://i.pravatar.cc/150?img=5",
+    content: "Harika yazı, ellerine sağlık!",
+  },
+  {
+    id: 2,
+    user: "mehmet_dev",
+    avatar: "https://i.pravatar.cc/150?img=12",
+    content: "React hakkında bu kadar sade bir anlatım görmemiştim.",
+  },
+];
 
 export default function Post() {
 
@@ -48,6 +62,30 @@ export default function Post() {
       </Box>
 
       <Divider my="xl" />
+
+
+      {comments.length > 0 && (
+        <Box mb="xl">
+          <Text size="lg" weight={500} mb="sm">
+            Yorumlar ({comments.length})
+          </Text>
+          <Stack spacing="md">
+            {comments.map((comment) => (
+              <Paper key={comment.id} shadow="xs" p="md" radius="md" withBorder>
+                <Group align="flex-start">
+                  <Avatar src={comment.avatar} radius="xl" />
+                  <Box>
+                    <Text size="sm" weight={500}>
+                      @{comment.user}
+                    </Text>
+                    <Text size="sm">{comment.content}</Text>
+                  </Box>
+                </Group>
+              </Paper>
+            ))}
+          </Stack>
+        </Box>
+      )}
 
       <Box>
         <Text size="lg" weight={500} mb="sm">
