@@ -1,0 +1,11 @@
+.my-editor .ProseMirror {
+  min-height: 300px;
+  height: 500px;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background: white;
+  overflow-y: auto;
+  outline: none;
+}
