@@ -1,8 +1,7 @@
 import { Outlet, useRoutes } from "react-router-dom";
-
 import { Home, UserProfile, 
 	CreatePost, Post, PostEdit,
-	Login, Register 
+	Login, Register, ProfileLayout 
 } from "@pages";
 
 
@@ -40,7 +39,7 @@ export default function Routes() {
             children: [
                 {
                     path: '/:userId',
-                    element: <UserProfile />
+                    element: <ProfileLayout />
                 },
                 {
                     path: '/posts/:postId',

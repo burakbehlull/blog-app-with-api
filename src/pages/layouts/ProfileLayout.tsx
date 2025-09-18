@@ -1,9 +1,12 @@
 import { Box, Flex, Text, Container, useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { PostCard } from "@components";
+import { useParams } from "react-router-dom"
 
 export default function ProfileLayout() {
   const theme = useMantineTheme();
+  
+  const { userId } = useParams()
   const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.md})`);
   const NAVBAR_HEIGHT = 60;
 
@@ -51,7 +54,7 @@ export default function ProfileLayout() {
             <Text fz="lg" fw={600}>
               Kullanıcı Profili
             </Text>
-            <Text c="dimmed">@burakbehlull</Text>
+            <Text c="dimmed">@burakbehlull - {userId}</Text>
           </Box>
         )}
       </Flex>
