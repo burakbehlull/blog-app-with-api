@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MantineProvider, createThemes } from '@mantine/core';
+import { MantineProvider, createTheme } from '@mantine/core';
 import { ProviderProps } from '@types'
 
 export default function Provider({ children }:ProviderProps) {
