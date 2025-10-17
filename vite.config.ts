@@ -9,6 +9,7 @@ function way(name: string): any {
 }
 
 export default defineConfig({
+  base: "/",
   plugins: [react(), tsconfigPaths()],
   server: {
 	  port: 8000
