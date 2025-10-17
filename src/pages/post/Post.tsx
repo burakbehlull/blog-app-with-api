@@ -4,14 +4,17 @@ import { useParams } from "react-router-dom"
 import { Container, Title, Text, Group, Divider, 
 	Stack, Textarea, Button, Box, Avatar, Paper } from "@mantine/core";
 
-const blogData = {
+import { IPost } from "@types";
+
+
+const blogData : IPost = {
   title: "React ile Modern Web Uygulamaları",
   author: "burakbehlull",
   views: 5,
   publishedAt: "20 Temmuz 2025",
   content: "React, kullanıcı arayüzleri oluşturmak için kullanılan popüler bir JavaScript kütüphanesidir.",
 };
-const comments = [
+const comments : any = [
   {
     id: 1,
     user: "ayse_krt",
@@ -36,7 +39,7 @@ export default function Post() {
         {blogData.title}
       </Title>
 
-      <Group spacing="xs" mb="md" align="center">
+      <Group gap="xs" mb="md" align="center">
         <Text color="black" size="sm">
           @{blogData.author}
         </Text>
@@ -69,7 +72,7 @@ export default function Post() {
           <Text size="lg" weight={500} mb="sm">
             Yorumlar ({comments.length})
           </Text>
-          <Stack spacing="md">
+          <Stack gap="md">
             {comments.map((comment) => (
               <Paper key={comment.id} shadow="xs" p="md" radius="md" withBorder>
                 <Group align="flex-start">

@@ -1,6 +1,7 @@
 import { Box, Container, Flex, Text } from "@mantine/core";
+import { ProviderProps } from '@types'
 
-export default function Layout({children}) {
+export default function Layout({children}:ProviderProps) {
   return (
     <Flex direction="column" h="100vh">
       <Box

@@ -7,7 +7,17 @@ interface ProviderProps {
   children: ReactNode;
 }
 
+interface IPost {
+	title: string,
+	author: string;
+	views: number;
+	publishedAt: string;
+	content: string,
+
+}
+
 export {
+	IPost,
 	TiptapEditorProps,
 	ProviderProps
 }
