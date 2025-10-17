@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { MantineProvider, createTheme, ColorScheme } from '@mantine/core';
+import { ProviderProps } from '@types'
 
-export default function Provider({ children }) {
+export default function Provider({ children }:ProviderProps) {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('dark');
 
   const toggleColorScheme = () => {

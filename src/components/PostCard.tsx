@@ -21,7 +21,8 @@ export default function PostCard() {
             uygulaması çıkaracağız.
           </Text>
 
-          <Group mt="md" spacing="xs">
+		  {/*spacing="xs"*/}	
+          <Group mt="md" gap="xs">
             <Text fz="xs" c="gray">May 18</Text>
           </Group>
         </Box>

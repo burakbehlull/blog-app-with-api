@@ -1,13 +1,14 @@
-import { useEditor, EditorContent } from '@tiptap/react';
+import React, { useEditor, EditorContent } from '@tiptap/react';
+
 import StarterKit from '@tiptap/starter-kit';
 import Underline from '@tiptap/extension-underline';
 import CodeBlock from '@tiptap/extension-code-block';
 
 import { Button, Flex } from "@mantine/core";
 
-import React from 'react';
+import { TiptapEditorProps } from '@types'
 
-export default function TiptapEditor({ onSave, onShow }) {
+export default function TiptapEditor({ onSave, onShow }: TiptapEditorProps) {
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -19,7 +20,7 @@ export default function TiptapEditor({ onSave, onShow }) {
 
   if (!editor) return null;
 
-  const ButtonStyle = {
+  const ButtonStyle : React.CSSProperties = {
     marginRight: '0.5rem',
     padding: '0.4rem 0.8rem',
     borderRadius: '4px',
