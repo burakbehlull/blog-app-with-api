@@ -3,7 +3,7 @@ import { MantineProvider, createTheme } from '@mantine/core';
 import { ProviderProps } from '@types'
 
 export default function Provider({ children }:ProviderProps) {
-  const [colorScheme, setColorScheme] = useState<string>('dark');
+  const [colorScheme, setColorScheme] = useState<string>('light');
 
   const toggleColorScheme = () => setColorScheme((prev:string) => (prev === 'light' ? 'dark' : 'light'));
   
