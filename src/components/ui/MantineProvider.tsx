@@ -1,13 +1,12 @@
 import { useState } from 'react';
-import { MantineProvider, createTheme, ColorScheme } from '@mantine/core';
+import { MantineProvider, createThemes } from '@mantine/core';
 import { ProviderProps } from '@types'
 
 export default function Provider({ children }:ProviderProps) {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>('dark');
+  const [colorScheme, setColorScheme] = useState<string>('dark');
 
-  const toggleColorScheme = () => {
-    setColorScheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
+  const toggleColorScheme = () => setColorScheme((prev:string) => (prev === 'light' ? 'dark' : 'light'));
+  
 
   const theme = createTheme({
     colorScheme,

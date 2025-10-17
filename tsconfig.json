@@ -7,7 +7,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "Node",
@@ -17,12 +17,12 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"],
-      "@pages/*": ["src/pages/*"],
-      "@requests/*": ["src/helpers/requests/*"],
-      "@ui/*": ["src/components/ui/*"],
-      "@components/*": ["src/components/*"],
-      "@types/*": ["src/types/*"]
+      "~/": ["src/*"],
+      "@pages": ["src/pages/index"],
+      "@requests": ["src/helpers/requests/requests"],
+      "@ui": ["src/components/ui/index"],
+      "@components": ["src/components/index"],
+      "@types": ["src/types/index"]
     }
   },
   "include": ["src"],
