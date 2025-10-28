@@ -1,5 +1,6 @@
 import { Box, Container, Flex, Text } from "@mantine/core";
 import { ProviderProps } from '@types'
+import { Navbar } from '@components'
 
 export default function Layout({children}:ProviderProps) {
   return (
@@ -18,9 +19,7 @@ export default function Layout({children}:ProviderProps) {
           borderBottom: "1px solid #ccc",
         }}
       >
-        <Text fw={600} fz="xl">
-          Navbar Alanı
-        </Text>
+        <Navbar />
       </Box>
 
       <Box h="90%">
